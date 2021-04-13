@@ -1,0 +1,69 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date: 13/04/2021
+#Description: This Script acts as a Menu Driven Calculator
+
+##################################################################################
+
+clear
+
+#initializing variables to get the result perfectly
+
+sum=0
+i=1
+
+#get input from the user
+
+echo "Enter First Number: "
+read n1
+echo "Enter Second Number: "
+read n2
+
+#while loop for calculation if user wishes to continue
+
+while [ $i == 1 ]
+do
+echo "1)Addition"
+echo "2)Subtraction"
+echo "3)Multiplication"
+echo "4)Division"
+echo "5)Modulus"
+echo "6)Power"
+
+#getting the user's choice for the Menu-driven calculation
+
+echo "Enter your choice: "
+read ch
+
+#switch case of the calculator
+
+case $ch in
+    1)((sum = $n1 + $n2))
+     echo "Add =" $sum;;
+    2)((sum = $n1 - $n2))
+     echo "Sub = " $sum;;
+    3)((sum = $n1 \* $n2))
+     echo "Mul = " $sum;;
+    4)((sum = $n1 / $n2))
+     echo "Div = " $sum;;
+    5)((sum = $n1 % $n2))
+    echo "Mod = " $sum;;
+    6)((sum = $n1 ** $n2))
+    echo "Pow = " $sum;;
+    *)echo "Invalid Choice!";;
+esac
+
+#asking if the user wishes to continue or exit
+
+echo "Do you want to still continue?(If "Yes" enter '1' else enter '0')"
+read i
+
+#if user wishes to exit
+if [ $i != 1 ]
+then
+    exit
+fi
+done    
