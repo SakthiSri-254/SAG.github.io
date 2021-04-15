@@ -18,7 +18,7 @@ if test -f $file_name;
 then
     echo "$file_name exists in the /data directory"
 else
-    echo "$file_name is missing. Please create the file using the command "./create_file.sh"
+    echo "$file_name is missing. Please create the file using the command './create_file.sh'"
 fi
 
 echo "Become root to access /tmp"
@@ -34,7 +34,7 @@ else
 	org_file="/data/sample.txt"
 	sl_file="/tmp/sample.txt"
 
-	echo "Symbolic(or)Soft link for the file "org_file" has been created at "sl_file""
+	echo "Symbolic(or)Soft link for the file "$org_file" has been created at "$sl_file""
 
 	echo "Checking for the file's inode number:"
 
