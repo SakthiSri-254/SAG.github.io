@@ -27,5 +27,5 @@ cat /proc/sys/fs/file-max
 
 
 echo
-echo "If you want to change the limit - give the command "sysctl -w fs.file-max = limit_value"" 
+echo "If you want to change the limit - give the command 'sysctl -w fs.file-max = limit_value' " 
 
