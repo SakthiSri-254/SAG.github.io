@@ -1,0 +1,31 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script sets the open file limit to 10000
+##################################################################################
+
+clear
+
+echo "Become root to change the open file limit."
+echo
+
+sysctl -w fs.file-max=10000
+
+echo "Command ran successfully"
+echo
+
+echo "Open file limit is set to 10000"
+echo
+
+echo "Cross-checking the open file limit"
+
+cat /proc/sys/fs/file-max
+
+
+echo
+echo "If you want to change the limit - give the command "sysctl -w fs.file-max = limit_value"" 
+

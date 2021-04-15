@@ -1,0 +1,33 @@
+ #!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script creates a swapfile of size 512MB
+##################################################################################
+
+clear
+
+echo "Become root to change the open file limit using command "su""
+echo
+
+read -p "Enter the path to create swap file: " path
+echo
+echo "Up to the creation of the swapfile"
+
+sudo fallocate -l 512M $path
+
+sudo echo "Changing permission for security reasons:"
+sudo chmod 0600 $path
+sudo chown root:root $path
+echo
+echo "Setting up a Linux swap area"
+sudo mkswap $path
+echo
+echo "Enabling the swap file"
+sudo swapon $path
+echo "Verifying if Linux file is activated or not"
+free -m
+

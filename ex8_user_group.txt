@@ -1,0 +1,24 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script creates a user named "tuser" at directory "/home/testuser" and group "testgroup"
+##################################################################################
+
+clear
+
+echo "Become root to create user in a group"
+
+echo
+
+sudo groupadd testgroup
+sudo useradd tuser
+
+sudo useradd -ingroup "testgroup" -home "/home/onworks/testuser" tuser
+
+echo "Password for the user:"
+
+sudo passwd tuser

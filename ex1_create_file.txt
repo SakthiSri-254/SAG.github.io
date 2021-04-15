@@ -1,0 +1,21 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script creates a file under /data directory
+##################################################################################
+
+clear
+
+cd /home/onworks/Desktop
+
+mkdir data
+
+touch sample.txt
+
+echo "This is Sample file" > /home/onworks/Desktop/data/sample.txt
+
+echo "File has been created and the content has been stored.

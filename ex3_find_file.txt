@@ -1,0 +1,29 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script finds a file under /data directory and copies it to another location if found
+##################################################################################
+
+clear
+
+cd /home/onworks/Desktop
+
+echo "Become root before accessing /tmp"
+find /home/onworks/Desktop/data -name "sample.txt" 
+
+if [ $? -eq 0 ]
+ then 
+ echo "File is found at /home/onworks/Desktop/data"
+ echo
+ cp /home/onworks/Desktop/data/sample.txt /tmp/found.txt
+ echo "File has been successfully copied to the /tmp directory"
+ echo
+ echo "To view the file"
+ ls -il /tmp/sample.txt
+else
+ echo "No such file is found."
+fi

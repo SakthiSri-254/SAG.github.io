@@ -1,0 +1,26 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script updates the umask value to get 644 permissions for files and only for the user "tuser"
+##################################################################################
+
+clear
+
+updateumask () 
+{
+	`sudo su - tuser -c "umask 0644"`
+	umask_update=`sudo su - tuser -c "umask"`
+	user_name=`sudo su - tuser -c "whoami"`
+	return
+}
+if [ `whoami` == root ]
+then
+	updateumask
+	echo "Umask updated for the $user_name to $umask_update"
+else
+	echo "Become root to update umask for any user"
+fi

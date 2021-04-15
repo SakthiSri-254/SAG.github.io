@@ -1,0 +1,15 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script is to be run by the service
+##################################################################################
+
+echo "Service has been started"
+echo
+cd /home/onworks/Desktop/
+./create_file.sh
+echo Service completed and is exiting"
