@@ -5,7 +5,7 @@
 #Author: Sakthi Sri S V
 #Date Created: 15/04/2021
 #Date Modified: 15/04/2021
-#Description: This Script creates a file under /data directory
+#Description: This Script starts a service
 ##################################################################################
 
 clear
@@ -28,6 +28,6 @@ echo "Starting the service"
 sudo systemctl start test.service
 
 echo "Service started"
-echo "Use "systemctl status test.service" to view"
+echo "Use systemctl status test.service to view"
 
 
