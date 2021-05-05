@@ -1,0 +1,9 @@
+#Commands
+
+kubectl scale deployment myfirstdeploy --replicas=5
+
+kubectl get deploy -l app=myfirst-app
+
+kubectl get rs -l app=myfirst-app
+ 
+kubectl get pod -l app=myfirst-app
