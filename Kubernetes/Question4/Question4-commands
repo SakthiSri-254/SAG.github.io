@@ -1,0 +1,12 @@
+#Commands
+vim pod-def.yaml
+
+kubectl apply -f pod-define.yaml
+
+vim pod-service.yaml
+
+kubectl apply -f pod-service.yaml
+
+kubectl get svc
+
+kubectl get pods
