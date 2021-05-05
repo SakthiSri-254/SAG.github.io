@@ -1,0 +1,18 @@
+#Commands
+
+  docker build .-t my_sample_app -f Dockerfile
+
+  docker images
+
+  docker run -p 8080:5000 -d - -name=my_sample_application my_sample_app
+
+  docker ps
+
+
+#Dockerfile
+
+  vi Dockerfile
+  
+#Application file
+
+  vi app.py
