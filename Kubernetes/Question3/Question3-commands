@@ -1,6 +1,6 @@
 #Commands
 
-vim pod-def.yaml
+vim pod-define.yaml
 
 kubectl apply -f pod-define.yaml
 
