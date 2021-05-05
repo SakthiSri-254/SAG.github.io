@@ -1,0 +1,7 @@
+#Commands
+
+kubectl apply -f redis-pvc.yaml
+
+kubectl get pv redis-pv
+
+kubectl get pvc redis-pvc
