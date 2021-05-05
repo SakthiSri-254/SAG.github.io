@@ -1,6 +1,6 @@
 #Commands
 
-docker run -d - -restart on-failure nginx:1.19.10
+docker run -d --restart on-failure nginx:1.19.10
 
 docker ps
 
