@@ -1,0 +1,43 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script creates a softlink to a file under /tmp directory
+##################################################################################
+
+clear
+
+cd /home/onworks/Desktop
+
+
+file_name="/data/sample.txt"
+if test -f $file_name;
+then
+    echo "$file_name exists in the /data directory"
+else
+    echo "$file_name is missing. Please create the file using the command './create_file.sh'
+fi
+
+echo "Become root to access /tmp"
+
+if [ "$EUID" -ne 0 ]
+then 
+	echo "Please run as root to create the soft link in /tmp using the command 'sudo' or 'su' "
+ 	exit 1
+else
+
+	ln -s /home/onworks/Desktop/data/sample.txt /tmp/sample.txt
+
+	org_file="/data/sample.txt"
+	sl_file="/tmp/sample.txt"
+
+	echo "Symbolic(or)Soft link for the file "$org_file" has been created at "sl_file" "
+
+	echo "Checking for the file's inode number:"
+
+	ls -il /home/onworks/Desktop/data/sample.txt
+	ls -il /tmp/sample.txt
+fi
