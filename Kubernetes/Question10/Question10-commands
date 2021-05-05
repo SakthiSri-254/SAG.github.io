@@ -1,0 +1,24 @@
+#Commands
+
+touch index.html
+
+vim index.html
+
+ls
+
+cat index.html
+
+
+kubectl apply -f pod-def.yaml
+
+kubectl get pod redis
+
+kubectl exec -it redis -- /bin/bash
+
+cat index.html
+
+ls
+
+exit
+
+ls
