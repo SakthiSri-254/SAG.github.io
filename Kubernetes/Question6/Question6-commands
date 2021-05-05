@@ -1,0 +1,7 @@
+#Commands
+
+kubectl set image deploy myfirstdeploy nginx=nginx:1.20.0 --record
+
+kubectl rollout status deployment/myfirstdeploy
+
+kubectl rollout history deployment/myfirstdeploy
