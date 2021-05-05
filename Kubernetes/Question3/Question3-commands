@@ -1,0 +1,7 @@
+#Commands
+
+vim pod-def.yaml
+
+kubectl apply -f pod-define.yaml
+
+kubectl get pods
