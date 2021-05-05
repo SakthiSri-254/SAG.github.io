@@ -8,6 +8,7 @@
 #Description: This Script parses a JSON file
 ##################################################################################
 
+
 clear
 
 echo "Installing jq before parsing a JSON"
