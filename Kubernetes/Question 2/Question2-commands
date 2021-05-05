@@ -1,3 +1,0 @@
-#Commmands
-
-kubectl expose pod web-server --type=ClusterIP --port=80
