@@ -3,3 +3,4 @@
 kubectl run web-server --image=nginx:1.19.10
 
 kubectl get pods
+
