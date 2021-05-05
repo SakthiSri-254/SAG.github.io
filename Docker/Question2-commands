@@ -3,3 +3,4 @@
 docker run -d - -restart on-failure nginx:1.19.10
 
 docker ps
+
