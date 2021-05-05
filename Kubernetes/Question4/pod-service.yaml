@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata: 
+	name: myfirstapp-service
+	labels:
+		name: myservice
+spec:
+	type: NodePort
+	selector:
+		name: myfirstpod
+	ports:
+  -	 name: nginx
+     protocol: TCP
+     port: 80
+     targetPort: 3000
+     nodePort: 30000
+  -	 name: redis
+     protocol: TCP
+     port: 6379
+     targetPort: 3001
+     nodePort: 30001
