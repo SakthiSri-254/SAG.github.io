@@ -1,0 +1,4 @@
+docker run - -rm nginx:1.19.10
+
+docker ps -a
+
