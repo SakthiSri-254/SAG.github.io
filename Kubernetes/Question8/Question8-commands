@@ -1,0 +1,5 @@
+#Commands
+
+kubectl apply -f redispv.yaml
+
+kubectl get pv redis-pv
