@@ -1,0 +1,6 @@
+#Commands
+
+
+docker run -d -v "/mnt/redis-data: /data " redis:6.2.2  
+
+docker exec -it #container_id /bin/bash
