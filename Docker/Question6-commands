@@ -1,0 +1,27 @@
+#Commands
+
+
+docker network ls
+
+docker network create -d bridge my-bridge
+
+docker images
+
+docker network inspect my-bridge
+
+docker network ls
+
+docker run -d nginx
+
+docker run -d redis
+
+docker ps
+
+docker images
+
+docker network connect my-bridge  #container_id_of_nginx
+
+docker network connect my-bridge  #container_id_of_redis
+
+docker network inspect my-bridge
+
