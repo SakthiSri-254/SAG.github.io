@@ -1,0 +1,11 @@
+#Commands
+
+kubectl create -f deploy-def.yaml
+
+kubectl get deploy -l app=myfirst-app
+
+kubectl get rs -l app=myfirst-app
+
+kubectl get pod -l app=myfirst-app
+
+kubectl describe myfirstdeploy
