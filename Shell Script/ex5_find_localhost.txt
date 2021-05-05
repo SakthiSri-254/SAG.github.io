@@ -1,0 +1,21 @@
+#!/bin/bash
+
+##################################################################################
+
+#Author: Sakthi Sri S V
+#Date Created: 15/04/2021
+#Date Modified: 15/04/2021
+#Description: This Script finds a file that contains "localhost" in in under /etc
+##################################################################################
+
+clear
+
+find /etc -name "*localhost*" 1> /tmp/find.out 2> /tmp/find.err
+
+echo "The outputs are redirected to /tmp/find.out"
+echo "The errors are redirected to /tmp/find.err"
+
+#to view the files that have been redirected 
+cd /tmp
+ls -ltr
+
